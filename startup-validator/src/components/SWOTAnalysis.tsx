@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sword, Shield, Zap, Skull } from 'lucide-react';
+import { Sword, Shield, Zap, Skull, type LucideIcon } from 'lucide-react';
 import clsx from 'clsx';
 
 interface SWOTProps {
@@ -12,7 +12,7 @@ interface SWOTProps {
     };
 }
 
-const SwotCard = ({ title, items, icon: Icon, color, delay }: { title: string, items: string[], icon: any, color: string, delay: number }) => (
+const SwotCard = ({ title, items, icon: Icon, color, delay }: { title: string, items: string[], icon: LucideIcon, color: string, delay: number }) => (
     <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}

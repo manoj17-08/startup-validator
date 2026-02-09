@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, AlertTriangle, Map, Terminal, Loader2, FileText, Download } from 'lucide-react';
+import { Search, AlertTriangle, Map, Terminal, Loader2, FileText, Download, type LucideIcon } from 'lucide-react';
 import { type AgentMessage, MOCK_DEBATE, MOCK_SWOT, MOCK_RADAR } from '../mockData';
 import { generatePDFReport } from '../utils/pdfGenerator';
 import { SWOTAnalysis } from './SWOTAnalysis';
@@ -19,7 +19,7 @@ const AgentCard = ({
     status
 }: {
     name: string;
-    icon: any;
+    icon: LucideIcon;
     color: string;
     messages: AgentMessage[];
     status: 'idle' | 'thinking' | 'done';
