@@ -5,7 +5,7 @@ def create_tasks(researcher, critic, planner):
     research_task = Task(
         description=(
             "Conduct a comprehensive market analysis for the startup idea: '{idea}'. "
-            "Identify at least 3 major competitors, their key weaknesses, and current market trends for 2024-2026. "
+            "Identify at least 4 major competitors, their key weaknesses, and current market trends for 2024-2026. "
             "Look for recent news or funding rounds in this space."
         ),
         expected_output=(

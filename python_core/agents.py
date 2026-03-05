@@ -8,7 +8,8 @@ load_dotenv()
 # Initialize Gemini LLM
 # We use the standard model for reasoning.
 llm = LLM(
-    model="gemini/gemini-2.0-flash",
+    # Using alias for latest stable flash model
+    model="gemini/gemini-flash-latest",
     api_key=os.getenv("GOOGLE_API_KEY"),
     temperature=0.7
 )
@@ -29,7 +30,7 @@ def create_agents():
         tools=[market_search_tool],
         llm=llm,
         allow_delegation=False,
-        max_rpm=10
+        max_rpm=2
     )
 
     # 2. Cynical Critic
@@ -46,7 +47,7 @@ def create_agents():
         ),
         llm=llm,
         allow_delegation=False,
-        max_rpm=10
+        max_rpm=2
     )
 
     # 3. Strategic Planner
@@ -62,7 +63,7 @@ def create_agents():
         ),
         llm=llm,
         allow_delegation=False,
-        max_rpm=10
+        max_rpm=5
     )
     
     return researcher, critic, planner
